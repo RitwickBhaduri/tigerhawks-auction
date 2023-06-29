@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TIGERHAWKS</title>
+  <link rel="icon" href="TigerHawksLogo_21.png" sizes="100x100">
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+
+    body {
+      display: flex;
+      align-items: stretch;
+      flex-direction: column;
+      background-color: #121212; /* Set the page background color */
+    }
+    
+    .logo-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100px; /* Adjust height as needed */
+      padding-top: 10px; /* Add padding to the top of the logo */
+      padding-bottom: 10px;
+    }
+
+    .logo-container img {
+      max-height: 90px; /* Adjust the maximum height of the logo as needed */
+      max-width: 100%; /* Preserve aspect ratio */
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
+  <script>
+    function resizeIframe() {
+      const iframe = document.querySelector('iframe');
+      iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
+    }
+
+    // JavaScript code to refresh the page
+    setInterval(function() {
+      location.reload();
+    }, 60000);
+  </script>
+</head>
+<body onload="resizeIframe()">
+  <div class="logo-container">
+    <img src="TigerHawksFullLogo.png" alt="Logo">
+  </div>
+  <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSWJUe_9ca1gfKUpp5s1j-oOmVPWi3jgumd5w8_2oV-I3Rg-bUt9IAMsTmdTxMJcg/pubhtml?widget=true&amp;headers=false"></iframe>
+</body>
+</html>
